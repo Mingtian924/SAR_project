@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片增强工具 - 上传图片</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="app-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2L4 6v12l8 4 8-4V6l-8-4z"/>
+          <path d="M12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+        </svg>
+        抗干扰化-SAR
+      </div>
+      <button class="logout-btn" id="logoutBtn">退出登录</button>
+    </header>
+
+    <main class="app-content">
+      <section class="card">
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+          </svg>
+          上传原图
+        </h2>
+        <p class="card-desc">支持点击上传或直接拖放图片，自动识别模糊区域进行优化</p>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" accept="image/jpeg,image/png,image/webp,image/jpg" id="fileInput" />
+          <div class="upload-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+            </svg>
+          </div>
+          <p class="upload-text">点击区域上传图片，或直接拖放至此</p>
+          <p class="format-tip">支持 JPG、PNG、WEBP 格式，单张图片不超过 10MB</p>
+          <div class="upload-error" id="uploadError">请选择有效的图片文件</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+          </svg>
+          处理后效果
+        </h2>
+        <p class="card-desc">上传图片后自动生成抗干扰化后的图片，可查看清晰细节</p>
+        <div class="preview-area" id="previewArea">
+          <div class="preview-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V4c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v4H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM7 4h10v4H7V4z"/>
+            </svg>
+          </div>
+          <p class="preview-text">上传图片后将自动生成目标图片</p>
+          <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>正在处理图片，请稍候...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/upload.js"></script>
+</body>
+</html>

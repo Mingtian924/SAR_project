@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAR - 激活验证</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/code.css">
+</head>
+<body>
+  <div class="code-card">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 11.586l4.95-4.95 1.414 1.414L13.414 13l4.95 4.95-1.414 1.414L12 12.97l-4.95 4.95-1.414-1.414L10.586 13 5.636 8.05l1.414-1.414L12 11.586z"/>
+      </svg>
+    </div>
+    <h1 class="title">抗干扰（SAR）</h1>
+    <p class="subtitle">请输入激活码以继续使用</p>
+    <p class="code-error" id="codeError">激活码无效，请重试</p>
+    <div class="form-group">
+      <label for="activeCode">激活码</label>
+      <input type="text" id="activeCode" placeholder="输入您的激活码（如 ABC123）">
+    </div>
+    <button class="verify-btn" id="verifyBtn">验证并进入</button>
+  </div>
+
+  <script src="js/code.js"></script>
+</body>
+</html>
